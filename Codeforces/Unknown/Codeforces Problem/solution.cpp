@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        boolean isPrime =true;
+        if(x<2){
+            isPrime =false;
+        }else{
+            for(int i =2; i*i <=x; i++){
+                if(x%i ==0){
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+        if(isPrime){
+            System.out.println("YES");
+        }else{
+            System.out.println("NO");
+        }
+        
+    }
+}
